@@ -1,8 +1,9 @@
-<form>
-    <div ng-repeat="q in $ctrl.questions">
-    <h2> {{q.questionText}}</h2>
-
-    <input type="{{q.answerFormat}}"/>
- </div>
- <input type="submit" value="Submit" onclick="$ctrl.surveyResponse()" />
- </form>
+    <div>
+        <div ng-repeat="q in $ctrl.questions">
+            <h2> {{q.questionText}}</h2>
+            
+            <input name="{{q.questionName}}"  type="{{q.answerFormat}}" />
+        </div>
+       
+            <button ng-click="$crtl.GetResponses();"> Find a Friend! </button>
+    </div>
